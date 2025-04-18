@@ -20,6 +20,10 @@ function monitor(){
         console.clear()
         console.table(usage)
 
+        const usedMemory = (os.totalmem() - os.freemem()) / (1024 * 1024 * 1024);
+
+        console.log(`Memory used: ${usedMemory.toFixed(4)} GB / Total RAM ${os.totalmem() / (1024 * 1024 * 1024).toFixed(2)}`)
+
     },1000)
 }
 
