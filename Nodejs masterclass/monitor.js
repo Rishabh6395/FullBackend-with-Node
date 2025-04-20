@@ -1,4 +1,5 @@
 import os from 'node:os'
+import chalk from 'chalk';
 
 
 function monitor(){
@@ -18,6 +19,7 @@ function monitor(){
         })
 
         console.clear()
+        console.log(chalk.bgBlue("hello world"))
         console.table(usage)
 
         const usedMemory = (os.totalmem() - os.freemem()) / (1024 * 1024 * 1024);
